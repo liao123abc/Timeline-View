@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     Button mHorizontalTimeLineButton;
     @BindView(R.id.horizontalTimeLineButtonWPadding)
     Button mHorizontalTimeLineButtonWPadding;
+    @BindView(R.id.custom_approval)
+    Button mCustom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mCustom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startCustomActivity();
+            }
+        });
+
     }
 
     private void onButtonClick(Orientation orientation, boolean withLinePadding) {
@@ -76,4 +85,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void startCustomActivity() {
+        Intent intent = new Intent(this, TimeLineActivity2.class);
+        startActivity(intent);
+    }
 }

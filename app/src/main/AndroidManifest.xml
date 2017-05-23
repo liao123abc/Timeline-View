@@ -22,6 +22,10 @@
         <activity
             android:name="com.github.vipulasri.timeline.TimeLineActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="com.github.vipulasri.timeline.TimeLineActivity2"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
