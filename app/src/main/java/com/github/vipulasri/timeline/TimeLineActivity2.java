@@ -52,11 +52,7 @@ public class TimeLineActivity2 extends AppCompatActivity {
     }
 
     private LinearLayoutManager getLinearLayoutManager() {
-        if (mOrientation == Orientation.HORIZONTAL) {
-            return new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        } else {
-            return new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        }
+        return new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
     }
 
     private void initView() {
@@ -70,8 +66,13 @@ public class TimeLineActivity2 extends AppCompatActivity {
         mDataList.add(new TimeLineModel("Courier is out to delivery your order", "2017-02-12 08:00", OrderStatus.ACTIVE));
         mDataList.add(new TimeLineModel("Item has reached courier facility at New Delhi", "2017-02-11 21:00", OrderStatus.COMPLETED));
         mDataList.add(new TimeLineModel("Item has been given to the courier", "2017-02-11 18:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Item is packed and will dispatch soon", "2017-02-11 09:30", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Order is being readied for dispatch", "2017-02-11 08:00", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Item is packed and will dispatch soon ", "2017-02-11 09:30", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Order is being readied for dispatchPermission is hereby granted, free of charge, to any person obtaining a copy\n" +
+                "  of this software and associated documentation files (the \"Software\"), to deal\n" +
+                "  in the Software without restriction, including without limitation the rights\n" +
+                "  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" +
+                "  copies of the Software, and to permit persons to whom the Software is\n" +
+                "  furnished to do so, subject to the following conditions:", "2017-02-11 08:00", OrderStatus.COMPLETED));
         mDataList.add(new TimeLineModel("Order processing initiated", "2017-02-10 15:00", OrderStatus.COMPLETED));
         mDataList.add(new TimeLineModel("Order confirmed by seller", "2017-02-10 14:30", OrderStatus.COMPLETED));
         mDataList.add(new TimeLineModel("Order placed successfully", "2017-02-10 14:00", OrderStatus.COMPLETED));

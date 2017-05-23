@@ -8,6 +8,31 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:layout_gravity="right"
+            android:text="approve" />
+
+        <TextView
+            android:id="@+id/date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:layout_gravity="right"
+            android:text="09:32" />
+
+    </LinearLayout>
+
     <com.github.vipulasri.timelineview.TimelineView
         android:id="@+id/time_marker"
         android:layout_width="wrap_content"

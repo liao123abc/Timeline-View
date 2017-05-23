@@ -36,7 +36,6 @@ public class TimeLineAdapter2 extends RecyclerView.Adapter<TimeLineViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        //return TimelineView.getTimeLineViewType(position,getItemCount());
         return LineType.NORMAL;
     }
 
@@ -56,16 +55,8 @@ public class TimeLineAdapter2 extends RecyclerView.Adapter<TimeLineViewHolder> {
 
         TimeLineModel timeLineModel = mFeedList.get(position);
 
-//        if(timeLineModel.getStatus() == OrderStatus.INACTIVE) {
-//            holder.mTimelineView.setMarker(VectorDrawableUtils.getDrawable(mContext,
-//                    R.drawable.ic_marker_inactive, android.R.color.darker_gray));
-//        } else if(timeLineModel.getStatus() == OrderStatus.ACTIVE) {
-//            holder.mTimelineView.setMarker(VectorDrawableUtils.getDrawable(mContext,
-//                    R.drawable.ic_marker_active, R.color.colorPrimary));
-//        } else {
-            holder.mTimelineView.setMarker(ContextCompat.getDrawable(mContext, R.drawable.ic_marker),
+        holder.mTimelineView.setMarker(ContextCompat.getDrawable(mContext, R.drawable.ic_marker),
                     ContextCompat.getColor(mContext, R.color.white));
-//        }
 
         if(!timeLineModel.getDate().isEmpty()) {
             holder.mDate.setVisibility(View.VISIBLE);
