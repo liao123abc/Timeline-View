@@ -24,7 +24,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name="com.github.vipulasri.timeline.TimeLineActivity2"
+            android:name="com.github.vipulasri.timeline.custom.TimeLineActivity2"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

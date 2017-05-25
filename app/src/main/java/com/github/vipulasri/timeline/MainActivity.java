@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import com.github.vipulasri.timeline.custom.TimeLineActivity2;
 import com.github.vipulasri.timeline.model.Orientation;
 
 import butterknife.BindView;

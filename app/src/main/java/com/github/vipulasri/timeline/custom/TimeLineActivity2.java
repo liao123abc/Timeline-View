@@ -1,14 +1,14 @@
-package com.github.vipulasri.timeline;
+package com.github.vipulasri.timeline.custom;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.github.vipulasri.timeline.MainActivity;
+import com.github.vipulasri.timeline.R;
 import com.github.vipulasri.timeline.model.OrderStatus;
 import com.github.vipulasri.timeline.model.Orientation;
 import com.github.vipulasri.timeline.model.TimeLineModel;
@@ -24,7 +24,7 @@ public class TimeLineActivity2 extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private TimeLineAdapter2 mTimeLineAdapter;
-    private List<TimeLineModel> mDataList = new ArrayList<>();
+    private List<TimeLineModel2> mDataList = new ArrayList<>();
     private Orientation mOrientation;
     private boolean mWithLinePadding;
 
@@ -62,20 +62,9 @@ public class TimeLineActivity2 extends AppCompatActivity {
     }
 
     private void setDataListItems(){
-        mDataList.add(new TimeLineModel("Item successfully delivered", "", OrderStatus.INACTIVE));
-        mDataList.add(new TimeLineModel("Courier is out to delivery your order", "2017-02-12 08:00", OrderStatus.ACTIVE));
-        mDataList.add(new TimeLineModel("Item has reached courier facility at New Delhi", "2017-02-11 21:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Item has been given to the courier", "2017-02-11 18:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Item is packed and will dispatch soon ", "2017-02-11 09:30", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Order is being readied for dispatchPermission is hereby granted, free of charge, to any person obtaining a copy\n" +
-                "  of this software and associated documentation files (the \"Software\"), to deal\n" +
-                "  in the Software without restriction, including without limitation the rights\n" +
-                "  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" +
-                "  copies of the Software, and to permit persons to whom the Software is\n" +
-                "  furnished to do so, subject to the following conditions:", "2017-02-11 08:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Order processing initiated", "2017-02-10 15:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Order confirmed by seller", "2017-02-10 14:30", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Order placed successfully", "2017-02-10 14:00", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel2("主管审核", "同意","Jack", "2017-02-12 09:00","", ApprovalStatus.AGREE));
+        mDataList.add(new TimeLineModel2("主管审核", "同意","Jack", "2017-02-12 07:00","资金数额不合规定", ApprovalStatus.DISAGREE));
+        mDataList.add(new TimeLineModel2("发起报销", "发起","Jack", "2017-02-12 06:00","", ApprovalStatus.STARTUP));
     }
 
     @Override
